@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 class Account(private val id: AccountId, private val baselineBalance: Money,
               private val activityWindow: ActivityWindow) {
     companion object {
-        class AccountId(private val id: Long) {
+        class AccountId(val id: Long) {
             override fun equals(other: Any?): Boolean {
                 if (this === other) return true
                 if (javaClass != other?.javaClass) return false
